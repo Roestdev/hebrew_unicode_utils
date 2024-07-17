@@ -1,12 +1,12 @@
 [package]
-name = "hebrew_unicode_script"
+name = "hebrew_unicode_utils"
 version = "0.1.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 authors = ["Roest Dev <github.ebook242@passinbox.com>"]
 description = "Some functions for processing Hebrew unicode characters."
-documentation = "https://docs.rs/crate/hebrew_unicode_script/"
-repository = "https://github.com/Roestdev/hebrew_unicode_script/"
+documentation = "https://docs.rs/crate/hebrew_unicode_utils/"
+repository = "https://github.com/Roestdev/hebrew_unicode_utils/"
 keywords = ["hebrew", "language", "unicode"]
 categories = ["text-processing"]
 readme = "README.md"
