@@ -5,6 +5,8 @@
   - [Introduction](#introduction)
   - [Description ](#description-)
     - [Notes](#notes)
+  - [Examples](#examples)
+    - [Removing](#removing)
   - [License ](#license-)
   - [Contribution ](#contribution-)
 
@@ -68,6 +70,30 @@ The types of functionality of this library can be captured in the following four
 ~~For an overview of released versions see [releases](https://github.com/Roestdev/hebrew_unicode_utils/releases).~~
 
 [^ TOC](#toc)
+
+## Examples
+
+### Removing
+
+```rust
+use hebrew_unicode_utils::remove_hbr_ligature_yiddish;
+    
+let test_str = "XװױײZ";
+let test_str_filtered = remove_hbr_ligature_yiddish(test_str);
+
+assert_eq!(test_str_filtered.as_ref(),"XZ");
+```
+
+```rust   
+use hebrew_unicode_utils::remove_hbr_accent;
+
+let test_str = "בְּרֵאשִׁ֖ית";
+let test_str_filtered = remove_hbr_accent(test_str);
+
+assert_eq!(test_str_filtered.as_ref(), "בְּרֵאשִׁית");
+```
+
+
 
 ~~## Safety <a name="safety"></a>~~
 
