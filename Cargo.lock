@@ -4,9 +4,9 @@ version = 3
 
 [[package]]
 name = "hebrew_unicode_script"
-version = "0.1.0"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "178c64ac37dddc3314745fb373090d3fc4667d0c9e9f18bf6aacbc144521cf7c"
+checksum = "c7ce5158121269e7d40700e5af3f38e0f2d2d06abe69bc27922464b1eca39bb8"
 
 [[package]]
 name = "hebrew_unicode_utils"
