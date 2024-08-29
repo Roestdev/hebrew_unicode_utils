@@ -5,9 +5,6 @@
   - [Introduction](#introduction)
   - [Description ](#description-)
     - [Notes](#notes)
-  - [Safety ](#safety-)
-  - [Panics ](#panics-)
-  - [Errors ](#errors-)
   - [License ](#license-)
   - [Contribution ](#contribution-)
 
@@ -16,7 +13,7 @@
 **This current readme gives a rough overview of the functionality as I currently envision it and functions as a model for implentation!**
 
 I know the target audience for this crate is small, but perhaps there are others who are interested and have ideas and/or wishes they would like to see applied to this crate.   
-Please let me know so that we can discuss whether your ideas are suitable and feasible for this crate. 
+Please let me know, so that we can discuss whether your ideas are suitable and feasible for this crate. 
 
 Note: This section will be updated or deleted over time.
 
@@ -36,54 +33,56 @@ The types of functionality of this library can be captured in the following four
    
    *This category is all about showing a particular type of Hebrew characters, for example, only vowel characters.*
 
-   *The idea behind this is that this can help people who want to learn Hebrew learn to distinguish the different characters.*
+   *The idea behind this is that this could help people (who want to learn Hebrew) to distinguish the different characters.*
 
-   **Note:**  
-   Consonants will always be shown in combination with e.g. vowel characters.
+   *Note:*  
+   *Consonants will always be shown in combination with e.g. vowel characters, otherwise the readability will decrease. For example, if there are multiple vowels in one sentence, then if there are no consonants  shown, then all vowels will be displayed on top of each other. Which would make the sentence unreadable.*
 <br><br>
-3. **Current practices**
+1. **Current practices**
    
    *On the Internet, certain ways have already been established for displaying Hebrew text.* 
    *The idea is to include functionality that is already used by various websites.*
 
    *One example is the [BlueLetterBible](https://www.blueletterbible.org/wlc/gen/1/1/s_1001), where it is possible to show  cantilation marks and or vowel points on top of the consonants.* 
 
-   The implementation usually consists of the following components:
-   - **Consonants**: Show only consonants with the Maqqef's and Sof-Pasuq's.   
+   *The implementation usually consists of the following components:*
+   - **Consonants:** Show only *consonants* with the *Maqqef's* and *Sof Pasuq's*.   
    -  **Vowels:** Show *consonants* + all *vowels*.   
-   -  **Accents**: Show *Vowels* + all *accents.*
+   -  **Accents:** Show *Vowels* + all *accents.*
 <br><br>
-4. **Statistics**
+1. **Statistics**
    
-   This category contains functionality that gives the user information about the particular statistics of a text string.
+   *This category contains functionality that gives the user information about the particular statistics of a text string.*
 
-   For example, what Hebrew character types are in my text string? 
+   *For example, what Hebrew character types are in my text string?*
 
 ### Notes
 
-- Vowels are sometimes called **Hebrew Points**
-- Accents are sometimes called **Hebrew Cantilationmarks**
+- Vowels are sometimes called *Hebrew Points*
+- Accents are sometimes called *Hebrew Cantilationmarks*
+- Sof Pasuq (סוֹף פָּסוּק) U+05C3  => **׃׃**
+- Maqaf (מַקָּף) U+05be => **־**
 
 <br>
 
-For an overview of released versions see [releases](https://github.com/Roestdev/hebrew_unicode_utils/releases).
+~~For an overview of released versions see [releases](https://github.com/Roestdev/hebrew_unicode_utils/releases).~~
 
 [^ TOC](#toc)
 
-## Safety <a name="safety"></a>
+~~## Safety <a name="safety"></a>~~
 
 All functions are written in safe Rust.
 
 
 [^ TOC](#toc)
 
-## Panics <a name="panics"></a>
+~~## Panics <a name="panics"></a>~~
 
 Not that I am aware of.
 
 [^ TOC](#toc)
 
-## Errors <a name="errors"></a>
+~~## Errors <a name="errors"></a>~~
 
 All (trait)functions return either true *or* false.
 
