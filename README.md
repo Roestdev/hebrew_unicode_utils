@@ -7,6 +7,12 @@
     - [Notes](#notes)
   - [Examples](#examples)
     - [Removing](#removing)
+    - [Showing](#showing)
+    - [Current practices](#current-practices)
+    - [Statistics](#statistics)
+  - [Safety ](#safety-)
+  - [Panics ](#panics-)
+  - [Errors ](#errors-)
   - [License ](#license-)
   - [Contribution ](#contribution-)
 
@@ -30,7 +36,9 @@ The types of functionality of this library can be captured in the following four
 1. **Removing**
 
    *This is about removing a certain set of Hebrew character types from a string.*
-<br><br>
+
+<br>
+
 2. **Showing**
    
    *This category is all about showing a particular type of Hebrew characters, for example, only vowel characters.*
@@ -39,8 +47,10 @@ The types of functionality of this library can be captured in the following four
 
    *Note:*  
    *Consonants will always be shown in combination with e.g. vowel characters, otherwise the readability will decrease. For example, if there are multiple vowels in one sentence, then if there are no consonants  shown, then all vowels will be displayed on top of each other. Which would make the sentence unreadable.*
-<br><br>
-1. **Current practices**
+
+<br>
+
+3. **Current practices**
    
    *On the Internet, certain ways have already been established for displaying Hebrew text.* 
    *The idea is to include functionality that is already used by various websites.*
@@ -51,8 +61,10 @@ The types of functionality of this library can be captured in the following four
    - **Consonants:** Show only *consonants* with the *Maqqef's* and *Sof Pasuq's*.   
    -  **Vowels:** Show *consonants* + all *vowels*.   
    -  **Accents:** Show *Vowels* + all *accents.*
-<br><br>
-1. **Statistics**
+
+<br>
+
+4. **Statistics**
    
    *This category contains functionality that gives the user information about the particular statistics of a text string.*
 
@@ -67,7 +79,7 @@ The types of functionality of this library can be captured in the following four
 
 <br>
 
-~~For an overview of released versions see [releases](https://github.com/Roestdev/hebrew_unicode_utils/releases).~~
+For an overview of released versions see [releases](https://github.com/Roestdev/hebrew_unicode_utils/releases).
 
 [^ TOC](#toc)
 
@@ -92,25 +104,55 @@ let test_str_filtered = remove_hbr_accent(test_str);
 
 assert_eq!(test_str_filtered.as_ref(), "בְּרֵאשִׁית");
 ```
+### Showing
+
+```rust   
+use hebrew_unicode_utils::show_hbr_mark;
+
+let input_str = "Q מִצְרָ֑יְמָה ה֯";
+let input_str_showed = show_hbr_mark(input_str);
+        
+assert_eq!(input_str_showed.as_ref(), "Q מצרימה ה֯");
+```
+
+```rust   
+use hebrew_unicode_utils::show_hbr_point_semi_vowel;
+
+let input_str = "ֲדְ נָפֶשׁ גֱכֳע";
+let input_str_showed = show_hbr_point_semi_vowel(input_str);
+
+assert_eq!(input_str_showed.as_ref(), "ֲדְ נפש גֱכֳע");
+    
+```
+### Current practices
+
+```rust   
+//todo
+```
 
 
+### Statistics
 
-~~## Safety <a name="safety"></a>~~
+```rust   
+//todo
+```
+
+## Safety <a name="safety"></a>
 
 All functions are written in safe Rust.
 
 
 [^ TOC](#toc)
 
-~~## Panics <a name="panics"></a>~~
+## Panics <a name="panics"></a>
 
-Not that I am aware of.
+Todo
 
 [^ TOC](#toc)
 
-~~## Errors <a name="errors"></a>~~
+## Errors <a name="errors"></a>
 
-All (trait)functions return either true *or* false.
+ToDo
 
 [^ TOC](#toc)
 

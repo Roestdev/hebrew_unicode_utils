@@ -1,6 +1,6 @@
 [package]
 name = "hebrew_unicode_utils"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 authors = ["Roest Dev <github.ebook242@passinbox.com>"]
@@ -14,4 +14,4 @@ readme = "README.md"
 
 
 [dependencies]
-hebrew_unicode_script = "0.4.0"
+hebrew_unicode_script = "0.4.1"

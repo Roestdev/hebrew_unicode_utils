@@ -7,3 +7,4 @@ mod statistics;
 
 // re-export
 pub use self::removing::unicode_block_hebrew::*;
+pub use self::showing::unicode_block_hebrew::*;

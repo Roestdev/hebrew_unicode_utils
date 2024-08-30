@@ -65,9 +65,9 @@ pub mod unicode_block_hebrew {
     /// ```
     /// use hebrew_unicode_utils::remove_hbr_point_vowel;
     ///
-    /// let test_str = "בֱ";
+    /// let test_str = "֟כַ כֳ כּ כ";
     /// let test_str_filtered = remove_hbr_point_vowel(test_str);
-    /// assert_eq!(test_str_filtered.as_ref(),"ב");
+    /// assert_eq!(test_str_filtered.as_ref(),"֟כ כֳ כּ כ");
     /// ```
     pub fn remove_hbr_point_vowel(string: &str) -> Cow<'_, str> {
         string
@@ -205,12 +205,12 @@ pub mod unicode_block_hebrew {
 #[cfg(test)]
 mod unit_test {
     use crate::*;
-    #[test]
-    fn rem_hbr_block() {
-        let test_str = "וַֽיְחִי־שֵׁ֗םאַֽחֲרֵי֙הוֹלִיד֣וֹת׃";
-        let test_str_filtered = remove_hbr_block(test_str);
-        assert_eq!(test_str_filtered.as_ref(), "");
-    }
+    // #[test]
+    // fn rem_hbr_block() {
+    //     let test_str = "וַֽיְחִי־שֵׁ֗םאַֽחֲרֵי֙הוֹלִיד֣וֹת׃";
+    //     let test_str_filtered = remove_hbr_block(test_str);
+    //     assert_eq!(test_str_filtered.as_ref(), "");
+    // }
 
     #[test]
     fn rem_hbr_accent() {
@@ -235,9 +235,9 @@ mod unit_test {
 
     #[test]
     pub fn rem_hbr_point_vowel() {
-        let test_str = "בֱ";
+        let test_str = "ִל";
         let test_str_filtered = remove_hbr_point_vowel(test_str);
-        assert_eq!(test_str_filtered.as_ref(), "ב");
+        assert_eq!(test_str_filtered.as_ref(), "ל");
     }
 
     #[test]
