@@ -231,7 +231,7 @@ mod unit_test {
     }
 
     #[test]
-         pub fn test_showing_hbr_point_vowel() {
+    pub fn test_showing_hbr_point_vowel() {
         let input_str = "שִׁבְעִ֣יםֱ";
         let input_str_showed = show_hbr_point_vowel(input_str);
         assert_eq!(input_str_showed.as_ref(), "שִבעִים");
