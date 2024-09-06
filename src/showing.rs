@@ -114,7 +114,7 @@ pub mod unicode_block_hebrew {
     pub fn show_hbr_punctuation(string: &str) -> Cow<'_, str> {
         string
             .chars()
-            .filter(|&c| !c.is_hbr_block() || c.is_hbr_consonant()|| c.is_hbr_punctuation() )
+            .filter(|&c| !c.is_hbr_block() || c.is_hbr_consonant() || c.is_hbr_punctuation())
             .collect()
     }
     /// Shows all Hebrew letters (final and normal) that are found in the given string.
@@ -130,7 +130,7 @@ pub mod unicode_block_hebrew {
     pub fn show_hbr_consonant(string: &str) -> Cow<'_, str> {
         string
             .chars()
-            .filter(|&c| !c.is_hbr_block() || c.is_hbr_consonant() )
+            .filter(|&c| !c.is_hbr_block() || c.is_hbr_consonant())
             .collect()
     }
     /// Shows all Hebrew normal letters that are found in the given string.
@@ -146,7 +146,7 @@ pub mod unicode_block_hebrew {
     pub fn show_hbr_consonant_normal(string: &str) -> Cow<'_, str> {
         string
             .chars()
-            .filter(|&c| !c.is_hbr_block() || c.is_hbr_consonant_normal() )
+            .filter(|&c| !c.is_hbr_block() || c.is_hbr_consonant_normal())
             .collect()
     }
     /// Shows all Hebrew final letters that are found in the given string.
@@ -162,7 +162,7 @@ pub mod unicode_block_hebrew {
     pub fn show_hbr_consonant_final(string: &str) -> Cow<'_, str> {
         string
             .chars()
-            .filter(|&c| !c.is_hbr_block() || c.is_hbr_consonant_final() )
+            .filter(|&c| !c.is_hbr_block() || c.is_hbr_consonant_final())
             .collect()
     }
     /// Shows all Hebrew yod triangles that are found in the given string.
@@ -196,7 +196,7 @@ pub mod unicode_block_hebrew {
         string
             .chars()
             .filter(|&c| !c.is_hbr_block() || c.is_hbr_consonant() || c.is_hbr_ligature_yiddish())
-                        .collect()
+            .collect()
     }
 }
 #[cfg(test)]

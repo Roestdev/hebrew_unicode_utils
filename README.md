@@ -37,7 +37,6 @@ The types of functionality of this library can be captured in the following four
 
    *This is about removing a certain set of Hebrew character types from a string.*
 
-<br>
 
 2. **Showing**
    
@@ -48,7 +47,6 @@ The types of functionality of this library can be captured in the following four
    *Note:*  
    *Consonants will always be shown in combination with e.g. vowel characters, otherwise the readability will decrease. For example, if there are multiple vowels in one sentence, then if there are no consonants  shown, then all vowels will be displayed on top of each other. Which would make the sentence unreadable.*
 
-<br>
 
 3. **Current practices**
    
@@ -62,7 +60,6 @@ The types of functionality of this library can be captured in the following four
    -  **Vowels:** Show *consonants* + all *vowels*.   
    -  **Accents:** Show *Vowels* + all *accents.*
 
-<br>
 
 4. **Statistics**
    
@@ -76,8 +73,6 @@ The types of functionality of this library can be captured in the following four
 - Accents are sometimes called *Hebrew Cantilationmarks*
 - Sof Pasuq (סוֹף פָּסוּק) U+05C3  => **׃׃**
 - Maqaf (מַקָּף) U+05be => **־**
-
-<br>
 
 For an overview of released versions see [releases](https://github.com/Roestdev/hebrew_unicode_utils/releases).
 
@@ -126,15 +121,30 @@ assert_eq!(input_str_showed.as_ref(), "ֲדְ נפש גֱכֳע");
 ```
 ### Current practices
 
-```rust   
-//todo
+```txt   
+todo!()
 ```
-
 
 ### Statistics
 
 ```rust   
-//todo
+use hebrew_unicode_utils::get_hbr_character_frequency;
+    
+let input_string = "Xבהב";
+let freq_map = get_hbr_character_frequency(input_string);
+assert_eq!(freq_map.contains_key("X"), false);
+assert_eq!(freq_map.get(&"ב".to_string()), Some(&2));  
+assert_eq!(freq_map.get(&"ה".to_string()), Some(&1));
+```
+
+```rust   
+use hebrew_unicode_utils::get_hbr_character_types;
+    
+let input_string = "Xבהב";
+let type_struct = get_hbr_character_types(input_string);
+assert_eq!(type_struct.accent, false);
+assert_eq!(type_struct.consonant, true);
+assert_eq!(type_struct.non_hebrew, true);
 ```
 
 ## Safety <a name="safety"></a>
