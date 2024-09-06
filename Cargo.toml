@@ -10,7 +10,7 @@ repository = "https://github.com/Roestdev/hebrew_unicode_utils/"
 keywords = ["hebrew", "language", "unicode"]
 categories = ["text-processing"]
 readme = "README.md"
-
+rust-version = "1.56.1"
 
 
 [dependencies]
