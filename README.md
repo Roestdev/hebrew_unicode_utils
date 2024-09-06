@@ -8,7 +8,6 @@
   - [Examples](#examples)
     - [Removing](#removing)
     - [Showing](#showing)
-    - [Current practices](#current-practices)
     - [Statistics](#statistics)
   - [Safety ](#safety-)
   - [Panics ](#panics-)
@@ -46,19 +45,6 @@ The types of functionality of this library can be captured in the following four
 
    *Note:*  
    *Consonants will always be shown in combination with e.g. vowel characters, otherwise the readability will decrease. For example, if there are multiple vowels in one sentence, then if there are no consonants  shown, then all vowels will be displayed on top of each other. Which would make the sentence unreadable.*
-
-
-3. **Current practices**
-   
-   *On the Internet, certain ways have already been established for displaying Hebrew text.* 
-   *The idea is to include functionality that is already used by various websites.*
-
-   *One example is the [BlueLetterBible](https://www.blueletterbible.org/wlc/gen/1/1/s_1001), where it is possible to show  cantilation marks and or vowel points on top of the consonants.* 
-
-   *The implementation usually consists of the following components:*
-   - **Consonants:** Show only *consonants* with the *Maqqef's* and *Sof Pasuq's*.   
-   -  **Vowels:** Show *consonants* + all *vowels*.   
-   -  **Accents:** Show *Vowels* + all *accents.*
 
 
 4. **Statistics**
@@ -118,11 +104,6 @@ let input_str_showed = show_hbr_point_semi_vowel(input_str);
 
 assert_eq!(input_str_showed.as_ref(), "ֲדְ נפש גֱכֳע");
     
-```
-### Current practices
-
-```txt   
-todo!()
 ```
 
 ### Statistics
