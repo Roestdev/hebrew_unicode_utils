@@ -1,6 +1,5 @@
 #![doc = include_str!("../README.md")]
 
-mod current_practices;
 mod removing;
 mod showing;
 mod statistics;
