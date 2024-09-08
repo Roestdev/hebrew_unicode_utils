@@ -1,17 +1,17 @@
 [package]
 name = "hebrew_unicode_utils"
-version = "0.4.1"
+version = "0.4.2"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 authors = ["Roest Dev <github.ebook242@passinbox.com>"]
 description = "Some functions for processing Hebrew unicode characters."
 documentation = "https://docs.rs/crate/hebrew_unicode_utils/"
 repository = "https://github.com/Roestdev/hebrew_unicode_utils/"
-keywords = ["hebrew", "language", "unicode"]
+keywords = ["hebrew", "unicode-characters", "unicode-text", "utf-8"]
 categories = ["text-processing"]
 readme = "README.md"
 rust-version = "1.56.1"
 
 
 [dependencies]
-hebrew_unicode_script = "0.4.1"
+hebrew_unicode_script = "0.4.2"

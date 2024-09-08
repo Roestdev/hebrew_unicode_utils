@@ -15,6 +15,7 @@
     - [Removing characters](#removing-characters)
     - [Showing characters](#showing-characters)
     - [Statistics](#statistics)
+  - [Install](#install)
   - [Safety ](#safety-)
   - [Panics ](#panics-)
   - [Errors ](#errors-)
@@ -122,10 +123,13 @@ assert_eq!(type_struct.consonant, true);
 assert_eq!(type_struct.non_hebrew, true);
 ```
 
+## Install
+
+For installation see the [hebrew_unicode_utils](https://crates.io/crates/hebrew_unicode_utils) page at crates.io.
+
 ## Safety <a name="safety"></a>
 
 All functions are written in safe Rust.
-
 
 [^ TOC](#toc)
 
@@ -155,6 +159,5 @@ for inclusion in this crate by you, as defined in the Apache-2.0 license, shall
 be dual licensed as above, without any additional terms or conditions.
 
 [^ TOC](#toc)
-
 
 This crate has been inspired by [niqqud](https://crates.io/crates/niqqud)
