@@ -10,7 +10,7 @@ checksum = "bca6a76446659c31fa068635764fe749de4c40a1838b96152d5fed09b864580d"
 
 [[package]]
 name = "hebrew_unicode_utils"
-version = "0.4.0"
+version = "0.4.1"
 dependencies = [
  "hebrew_unicode_script",
 ]

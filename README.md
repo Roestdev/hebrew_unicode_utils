@@ -9,12 +9,11 @@
 ## Table of contents <a name="toc"></a>
 - [Hebrew\_Unicode\_Utils](#hebrew_unicode_utils)
   - [Table of contents ](#table-of-contents-)
-  - [Introduction](#introduction)
   - [Description ](#description-)
     - [Notes](#notes)
   - [Examples](#examples)
-    - [Removing](#removing)
-    - [Showing](#showing)
+    - [Removing characters](#removing-characters)
+    - [Showing characters](#showing-characters)
     - [Statistics](#statistics)
   - [Safety ](#safety-)
   - [Panics ](#panics-)
@@ -22,58 +21,46 @@
   - [License ](#license-)
   - [Contribution ](#contribution-)
 
-## Introduction
-
-**This current readme gives a rough overview of the functionality as I currently envision it and functions as a model for implentation!**
-
-I know the target audience for this crate is small, but perhaps there are others who are interested and have ideas and/or wishes they would like to see applied to this crate.   
-Please let me know, so that we can discuss whether your ideas are suitable and feasible for this crate. 
-
-Note: This section will be updated or deleted over time.
-
 ## Description <a name="description"></a>
 
 This crate (*hebrew_unicode_utils*) is a library written in Rust and can be used for editing strings which contains Hebrew characters. It is built on top of the low-level crate *hebrew_unicode_script*.
 
 Functionality of this crate will only focus on the [Unicode Block Hebrew](https://www.unicode.org/charts/PDF/U0590.pdf).
 
-The types of functionality of this library can be captured in the following four categories:
+The types of functionality of this library can be captured in the following three categories:
 
-1. **Removing**
+1. **Removing characters**
 
-   *This is about removing a certain set of Hebrew character types from a string.*
+   This is about removing a certain set of Hebrew character types from a string.  
 
+2. **Showing characters**
 
-2. **Showing**
-   
-   *This category is all about showing a particular type of Hebrew characters, for example, only vowel characters.*
+   This category is all about showing a particular type of Hebrew characters, for example, only vowel characters.
 
-   *The idea behind this is that this could help people (who want to learn Hebrew) to distinguish the different characters.*
+   The idea behind this is that this could help people (who want to learn Hebrew) to distinguish the different characters.
 
    *Note:*  
-   *Consonants will always be shown in combination with e.g. vowel characters, otherwise the readability will decrease. For example, if there are multiple vowels in one sentence, then if there are no consonants  shown, then all vowels will be displayed on top of each other. Which would make the sentence unreadable.*
+   Consonants will always be shown in combination with e.g. vowel characters, otherwise the readability will decrease. For example, if there are multiple vowels in one sentence, then if there are no consonants  shown, then all vowels will be displayed on top of each other. Which would make the sentence unreadable.  
+
+3. **Statistics**
+
+   This category contains functionality that gives the user information about the particular statistics of a text string.
+
+   For example an answer on the following question: "What Hebrew character types are in my text string?" 
 
 
-4. **Statistics**
-   
-   *This category contains functionality that gives the user information about the particular statistics of a text string.*
-
-   *For example, what Hebrew character types are in my text string?*
+For an overview of released versions see [releases](https://github.com/Roestdev/hebrew_unicode_utils/releases).   
 
 ### Notes
+ - Vowels are sometimes called *Hebrew Points*
+ - Accents are sometimes called *Hebrew Cantilationmarks*
 
-- Vowels are sometimes called *Hebrew Points*
-- Accents are sometimes called *Hebrew Cantilationmarks*
-- Sof Pasuq (סוֹף פָּסוּק) U+05C3  => **׃׃**
-- Maqaf (מַקָּף) U+05be => **־**
-
-For an overview of released versions see [releases](https://github.com/Roestdev/hebrew_unicode_utils/releases).
 
 [^ TOC](#toc)
 
 ## Examples
 
-### Removing
+### Removing characters
 
 ```rust
 use hebrew_unicode_utils::remove_hbr_ligature_yiddish;
@@ -92,7 +79,7 @@ let test_str_filtered = remove_hbr_accent(test_str);
 
 assert_eq!(test_str_filtered.as_ref(), "בְּרֵאשִׁית");
 ```
-### Showing
+### Showing characters
 
 ```rust   
 use hebrew_unicode_utils::show_hbr_mark;
@@ -144,13 +131,13 @@ All functions are written in safe Rust.
 
 ## Panics <a name="panics"></a>
 
-Todo
+No panics for so far I know of.
 
 [^ TOC](#toc)
 
 ## Errors <a name="errors"></a>
 
-ToDo
+All functions return either a *Cow*, a *Struct* or a *HashMap*.
 
 [^ TOC](#toc)
 
@@ -168,5 +155,6 @@ for inclusion in this crate by you, as defined in the Apache-2.0 license, shall
 be dual licensed as above, without any additional terms or conditions.
 
 [^ TOC](#toc)
+
 
 This crate has been inspired by [niqqud](https://crates.io/crates/niqqud)
