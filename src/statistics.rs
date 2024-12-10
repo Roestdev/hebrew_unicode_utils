@@ -2,7 +2,18 @@ pub mod unicode_block_hebrew {
     use hebrew_unicode_script::HebrewUnicodeScript;
     use std::collections::HashMap;
 
-    #[derive(Debug, Default)]
+    /*Copy
+    Clone
+    Eq
+    PartialEq
+    Ord
+    PartialOrd
+    Hash
+    Debug
+    Display
+    Default */
+
+    #[derive(Copy, Clone, Eq, PartialEq, Ord, PartialOrd, Hash, Debug, Default)]
     pub struct HebrewCharacterTypes {
         pub accent: bool,
         pub consonant: bool,

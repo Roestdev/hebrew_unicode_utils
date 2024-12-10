@@ -1,6 +1,6 @@
 [package]
 name = "hebrew_unicode_utils"
-version = "0.4.2"
+version = "0.4.3"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 authors = ["Roest Dev <github.ebook242@passinbox.com>"]
@@ -14,4 +14,4 @@ rust-version = "1.56.1"
 
 
 [dependencies]
-hebrew_unicode_script = "0.4.2"
+hebrew_unicode_script = "0.5.0"
